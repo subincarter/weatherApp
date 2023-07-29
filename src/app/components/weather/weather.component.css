@@ -1,0 +1,40 @@
+.weather {
+ position: relative;
+ top: 15vh;
+}
+.card{
+    min-height: 500px;
+}
+.box.box1{
+    object-fit: cover;
+}
+body{
+    width: 100vh;
+}
+.left{
+    opacity: 0.8;
+    background: #4d00ff12;
+    color : white
+}
+
+.center {
+    margin: 0;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+  }
+  .head{
+    height: 300px;
+    color:aliceblue;
+    opacity : 0.8;
+  }
+  .right{
+    margin: 0;
+    position: absolute;
+    top: 17%;
+    left: 35%;
+  }
+
+  table{
+    font-size  : 10px;
+  }
