@@ -40,7 +40,8 @@ table td{
 }
 
 .btn {
-  background-color: #890a0a
+  background-color: #890a0a;
+  border: black;
 }
 
 @media only screen and (max-width: 600px)  {
