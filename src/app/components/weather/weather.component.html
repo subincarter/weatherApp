@@ -1,58 +1,81 @@
 <section class="section weather">
     <div class="container ">
-        <div class="row">
-            <div class="col-sm-5">
-                <div class="card left text-center">
-                    <div class="card-body center">
-                        <h5 class="card-title">Weather by city</h5>
-                        <p class="card-text">please enter the city name</p>
-                        <input type="text" class="form-control" [(ngModel)]="location">
+        <div class="row weather-box">
+            <div class="col-sm-9">
+                <div class="card box">
+                    <div class="card-body">
+                        <h3 class="card-title">Weather in : {{city}}</h3>
+                        <p>{{summary}}</p>
+                        <p>{{day}} , {{month}} {{date}}</p>
+                        <div class="row">
+                            <div class="col-md-3 col1">
+                                <h1 class="temperature-text">{{temp | number :'1.0-0'}} &#8451;</h1>
+                            </div>
+                            <div class="col-md-2 text-center col2">
+                                <img src="http://openweathermap.org/img/w/{{icon}}.png" alt="" width="80px">
+                                <p style="font-size: 11px;">{{weather}}</p>
+                            </div>
+                            <div class="col-md-4">
+                            </div>
+                            <div class="col-md-3 text-right">
+                                <table class="table tableTempDetails">
+                                    <tbody>
+                                        <tr>
+                                            <td>Low </td>
+                                            <td>: {{temp_min | number :'1.0-0'}} &#8451;</td>
+                                        </tr>
+                                        <tr>
+                                            <td>High </td>
+                                            <td>: {{temp_max | number :'1.0-0'}} &#8451;</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <table class="table xl">
+                                <tbody>
+                                    <tr>
+                                        <td>Summary </td>
+                                        <td>: {{summary}}</td>
+                                        <td>Temperature </td>
+                                        <td>: {{temp | number :'1.0-0'}} &#8451;</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Feels like </td>
+                                        <td>: {{feels_like | number :'1.0-0'}} &#8451;</td>
+                                        <td>Pressure </td>
+                                        <td>: {{pressure}} hPa</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Himudity </td>
+                                        <td>: {{himudity}}%</td>
+                                        <td>Wind </td>
+                                        <td>: {{speed}} km/h</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                         <br>
-                        <button type="button" class="btn btn-primary" name="submit" (click)="getWeather()">get
-                            weather</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-5">
-                <div class="card">
-                    <div class="card-body head"
-                        style="background: url('assets/images/{{weather}}.jpg');">
-                        <div class="card-body center right text-center">
-                            <h5 class="card-title">{{weather}} </h5>
-                            <img src="http://openweathermap.org/img/w/{{icon}}.png" alt="" width="80px">
-                            <h1 class="card-text">{{temp}} &#8457;</h1>
+                        <div class="row">
+                            <h5 class="card-title">Get Weather By city </h5>
+                            <div class="col-md-1"></div>
+                            <div class="col-md-5" style="margin-bottom: 11px;">
+                                <input type="text" class="form-control" [(ngModel)]="location">
+
+                            </div>
+                            <br>
+                            <div class="col-md-4">
+                                <button type="button" class="btn btn-primary" name="submit" (click)="getWeather()">get
+                                    weather</button>
+                            </div>
+                            <div class="col-md-2"></div>
+
                         </div>
                     </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Weather Details for city : {{city}}</h5>
-                        <table class="table">
-                            <tbody>
-                                <tr>
-                                    <td>Summary </td>
-                                    <td>: {{summary}}</td>
-                                    <td>Temperature </td>
-                                    <td>: {{temp}} &#8457;</td>
-                                </tr>
-                                <tr>
-                                    <td>Feels like </td>
-                                    <td>: {{feels_like}} &#8457; </td>
-                                    <td>Pressure </td>
-                                    <td>: {{pressure}} hPa</td>
-                                </tr>
-                                <tr>
-                                    <td>Himudity </td>
-                                    <td>: {{himudity}}%</td>
-                                    <td>Wind </td>
-                                    <td>: {{pressure}} mph</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
                 </div>
             </div>
+            
         </div>
     </div>
 </section>
-<!-- <div class="card" style="width: 18rem;">
-    
-  </div> -->

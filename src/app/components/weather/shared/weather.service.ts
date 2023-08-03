@@ -13,6 +13,6 @@ export class WeatherService {
     // return this.http.get(`${"https://api.openweathermap.org/data/2.5/weather?q="+location+'&appid=7ad05252fe5822cf96c38f478fdebc40'}`,
 
     return this.http.get(`${"https://api.openweathermap.org/data/2.5/weather"}`,
-    {params : {q : location , appid : '7ad05252fe5822cf96c38f478fdebc40'}})
+    {params : {q : location , appid : '7ad05252fe5822cf96c38f478fdebc40',units : 'metric'}})
   }
 }

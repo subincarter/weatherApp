@@ -1,40 +1,64 @@
 .weather {
- position: relative;
- top: 15vh;
-}
-.card{
-    min-height: 500px;
-}
-.box.box1{
-    object-fit: cover;
-}
-body{
-    width: 100vh;
-}
-.left{
-    opacity: 0.8;
-    background: #4d00ff12;
-    color : white
+  position: relative;
+  top: 10vh;
 }
 
-.center {
-    margin: 0;
-    position: absolute;
-    top: 25%;
-    left: 25%;
-  }
-  .head{
-    height: 300px;
-    color:aliceblue;
-    opacity : 0.8;
-  }
-  .right{
-    margin: 0;
-    position: absolute;
-    top: 17%;
-    left: 35%;
-  }
+table {
+  font-size: 15px;
+}
+table td{
+  background: #310505;
+  color: white;
+}
 
+.weather-box {
+  display: flex;
+  justify-content: center;
+}
+
+.box {
+  border-radius: 30px;
+  box-shadow: 4px 3px 4px 6px darkred;
+  padding: 15px;
+  /* background: #310505; */
+  background: url("https://w0.peakpx.com/wallpaper/194/935/HD-wallpaper-red-storm-red-tree-dark-clouds-storm-field.jpg");
+  color: white;
+}
+
+.card-title {
+  font-weight: bolder;
+  font-style: italic;
+}
+
+.temperature-text {
+  font-weight: bolder;
+  font-size: 65px;
+}
+
+.tableTempDetails {
+  font-size: 11px;
+}
+
+.btn {
+  background-color: #890a0a
+}
+
+@media only screen and (max-width: 600px)  {
+  .col1{
+    max-width: 130px;
+  }
+  .col2{
+    max-width: 130px;
+  }
+  .temperature-text {
+    font-weight: bolder;
+    font-size: 40px;
+  }
+  .weather {
+    position: relative;
+    top: 0vh;
+  }
   table{
-    font-size  : 10px;
+    font-size: 8px;
   }
+}
